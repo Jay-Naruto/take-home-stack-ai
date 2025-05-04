@@ -10,8 +10,11 @@ load_dotenv()
 
 
 TESTING = os.getenv('TESTING', 'False') == 'True'
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://postgres@postgres:5432/vectordb') 
+
 Base = declarative_base()
-SQLALCHEMY_DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///./test.db') if TESTING else "postgresql://postgres@localhost/vectordb"
+SQLALCHEMY_DATABASE_URL = DATABASE_URL if not TESTING else 'sqlite:///./test.db'
+
 engine = create_engine(SQLALCHEMY_DATABASE_URL, echo=True)
 sessionLocal = sessionmaker(autocommit = False, autoflush = False, bind = engine)
 print(f"TESTING TRUE/FALSE: {TESTING}")

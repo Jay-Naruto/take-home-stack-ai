@@ -119,6 +119,6 @@ for i in range(10):
                             }
         })
 
-json_output = json.dumps(libraries[1], indent=2)
+json_output = json.dumps(libraries[0], indent=2)
 with open("output.json", "w") as json_file:
     json_file.write(json_output)
