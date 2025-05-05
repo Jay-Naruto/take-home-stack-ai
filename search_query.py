@@ -13,7 +13,7 @@ def search_query_generic(query: Query, db: Session, index_algorithm):
     all_embeddings = [chunk.embedding for chunk in chunks]
     chunk_ids =[chunk.id for chunk in chunks]
     index = index_algorithm(all_embeddings, chunk_ids)
-    nearest_nbhs = index.knn_search(response, k=5)
+    nearest_nbhs = index.knn_search(response, k=3)
 
     result_texts =[]
     

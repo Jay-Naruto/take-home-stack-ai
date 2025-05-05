@@ -59,7 +59,7 @@ def update_chunk(library_id: UUID, document_id:UUID, chunk_id: UUID, chunk:Chunk
         if not embedding:
             raise HTTPException(status_code=400, detail="Embedding generation failed, received empty embedding.")
 
-        db_chunk.text= hunk.text
+        db_chunk.text= chunk.text
         db_chunk.embedding=embedding
         db_chunk.metadata_config=chunk.metadata_config
 
