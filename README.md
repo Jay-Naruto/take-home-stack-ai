@@ -244,7 +244,7 @@ This project meets all the outlined evaluation criteria:
 ## Demo
 - [Installation and Demo](https://drive.google.com/file/d/16ZYGtn8n_SvPIJ3wwzQuvtBiXcLCNQzq/view?usp=sharing)
 
-- [Explanation of technical choices](https://drive.google.com/file/d/16ZYGtn8n_SvPIJ3wwzQuvtBiXcLCNQzq/view?usp=sharing)
+- [Explanation of technical choices](https://drive.google.com/file/d/1pyFhKPNkccHjPCIegFIfLCQ8R2_HmkfI/view?usp=sharing)
 
 ## Environment Variables
 
